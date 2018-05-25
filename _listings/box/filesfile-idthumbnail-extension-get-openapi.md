@@ -3,9 +3,11 @@ swagger: "2.0"
 x-collection-name: Box
 x-complete: 0
 info:
-  title: Box Permanently Delete
-  description: Permanently deletes an item that is in the trash. The item will no
-    longer exist in Box. This action cannot be undone.
+  title: Box Get Thumbnail
+  description: Retrieves a thumbnail, or smaller image representation, of this file.
+    Sizes of 32x32,64x64, 128x128, and 256x256 can be returned in the .png format
+    and sizes of 32x32, 94x94, 160x160, and 320x320 can be returned in the .jpg format.
+    Thumbnails can be generated for the image and video file formats listed here.
   version: 1.0.0
 host: api.box.com
 basePath: /2.0
@@ -290,42 +292,6 @@ paths:
       - ""
       - Thumbnail.
       - Extension
-  /files/{FILE_ID}/trash:
-    get:
-      summary: Get Trashed File
-      description: Retrieves an item that has been moved to the trash.
-      operationId: getTrashedFile
-      x-api-path-slug: filesfile-idtrash-get
-      parameters:
-      - in: path
-        name: FILE_ID
-      responses:
-        200:
-          description: OK
-      tags:
-      - Documents
-      - Files
-      - File
-      - ""
-      - Trash
-    delete:
-      summary: Permanently Delete
-      description: Permanently deletes an item that is in the trash. The item will
-        no longer exist in Box. This action cannot be undone.
-      operationId: deleteTrashedFile
-      x-api-path-slug: filesfile-idtrash-delete
-      parameters:
-      - in: path
-        name: FILE_ID
-      responses:
-        200:
-          description: OK
-      tags:
-      - Documents
-      - Files
-      - File
-      - ""
-      - Trash
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

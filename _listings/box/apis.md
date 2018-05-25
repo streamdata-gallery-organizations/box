@@ -1,17 +1,14 @@
 ---
 name: Box
 x-slug: box
-description: Box Inc. (formerly Box.net) is an online file sharing and Cloud content
-  management service for enterprise companies. The company has adopted a freemium
-  business model, and provides 5 GB of free storage [3] for personal accounts. A mobile
-  version of the service is available for Android, BlackBerry, iOS, WebOS, and Windows
-  Phone devices. The company is based in Los Altos, California.
-image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+description: Box is changing how you manage content across your business from simple
+  file sharing to building custom apps.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
 x-kinRank: "9"
-x-alexaRank: ""
+x-alexaRank: "443"
 tags: Box
-created: "2018-05-21"
-modified: "2018-05-21"
+created: "2018-05-25"
+modified: "2018-05-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/box/master/_listings/box/apis.md
 specificationVersion: "0.14"
 apis:
@@ -19,7 +16,7 @@ apis:
   x-api-slug: box
   description: The Pre-flight check API will verify that a file will be accepted by
     Box before you send all the bytes over the wire.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/content
   tags: Documents,Files, Content
@@ -29,7 +26,7 @@ apis:
 - name: Box Get File's Info, Get Embed Link
   x-api-slug: box
   description: Used to retrieve the metadata about a file.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}
   tags: Documents,Files, File
@@ -46,7 +43,7 @@ apis:
     To lock and unlock files, you execute a PUT operation on the /files/{file id} endpoint and set or clear the lock properties on the file.
 
     Used to create a shared link for this particular file. Please see here for more information on the permissions available for shared links. In order to get default shared link status, set it to an empty access level, i.e. {"shared_link": {}}. In order to disable a shared link, send this same type of PUT request with the value of shared_link set to null, i.e. {"shared_link": null}
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}
   tags: Documents,Files, File
@@ -57,7 +54,7 @@ apis:
   x-api-slug: box
   description: "Discards a file to the trash. The etag of the file can be included
     as an \u2018If-Match\u2019 header to prevent race conditions."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}
   tags: Documents,Files, File
@@ -73,7 +70,7 @@ apis:
     If that parent folder no longer exists or if there is now an item with the same
     name in that parent folder, the new parent folder and/or new name will need to
     be included in the request.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}
   tags: Documents,Files, File
@@ -84,7 +81,7 @@ apis:
   x-api-slug: box
   description: Retrieves the actual data of the file. An optional version parameter
     can be set to download a previous version of the file.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/content
   tags: Documents,Files, File, , Content
@@ -98,7 +95,7 @@ apis:
   description: If there are previous versions of this file, this method can be used
     to retrieve information about the older versions. (Versions are only tracked for
     Box users with premium accounts.)
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/versions
   tags: Documents,Files, File, , Versions
@@ -115,7 +112,7 @@ apis:
     will have the exact same contents, the same SHA1/etag, and the same name as the
     original. Other properties such as comments do not get updated to their former
     values.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/versions/current
   tags: Documents,Files, File, , Versions, Current
@@ -127,7 +124,7 @@ apis:
   description: Discards a specific file version to the trash. (Depending on the enterprise
     settings for this user, the item will either be actually deleted from Box or moved
     to the trash.)
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/versions/{VERSION_ID}
   tags: Documents,Files, File, , Versions, Version
@@ -140,7 +137,7 @@ apis:
   x-api-slug: box
   description: Used to create a copy of a file in another folder. The original version
     of the file will not be altered.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/copy
   tags: Documents,Files, File, , Copy
@@ -153,19 +150,19 @@ apis:
     Sizes of 32x32,64x64, 128x128, and 256x256 can be returned in the .png format
     and sizes of 32x32, 94x94, 160x160, and 320x320 can be returned in the .jpg format.
     Thumbnails can be generated for the image and video file formats listed here.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/thumbnail.{EXTENSION}
   tags: Documents,Files, File, , Thumbnail., Extension
   properties:
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/box/master/_listings/box/filesfile-idthumbnailextension-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/box/master/_listings/box/filesfile-idthumbnail-extension-get-postman.md
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/box/master/_listings/box/filesfile-idthumbnailextension-get-openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/box/master/_listings/box/filesfile-idthumbnail-extension-get-openapi.md
 - name: Box Get Trashed File
   x-api-slug: box
   description: Retrieves an item that has been moved to the trash.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/trash
   tags: Documents,Files, File, , Trash
@@ -178,7 +175,7 @@ apis:
   x-api-slug: box
   description: Permanently deletes an item that is in the trash. The item will no
     longer exist in Box. This action cannot be undone.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/trash
   tags: Documents,Files, File, , Trash
@@ -190,7 +187,7 @@ apis:
 - name: Box Get File's Comments
   x-api-slug: box
   description: Retrieves the comments on a particular file, if any exist.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/comments
   tags: Documents,Files, File, , Comments
@@ -202,7 +199,7 @@ apis:
 - name: Box Get File's Collaborations
   x-api-slug: box
   description: Use this to get a list of all the collaborations on a file
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/collaborations
   tags: Documents,Files, File, , Collaborations
@@ -214,7 +211,7 @@ apis:
 - name: Box Get File's Tasks
   x-api-slug: box
   description: Retrieves all of the tasks for given file.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/tasks
   tags: Documents,Files, File, , Tasks
@@ -227,7 +224,7 @@ apis:
   x-api-slug: box
   description: Used to create a new empty folder. The new folder will be created inside
     of the specified parent folder
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders
   tags: Documents,Folders
@@ -239,7 +236,7 @@ apis:
   description: "Retrieves the full metadata about a folder, including information
     about when it was last updated as well as the files and folders contained in it.
     The root folder of a Box account is always represented by the id \u201C0\u201D."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}
   tags: Documents,Folders, Folder
@@ -271,7 +268,7 @@ apis:
     If any collection ids are malformed or do not exist in the user\u2019s account,
     the API call will throw a 400. Only if all of the collection ids are valid will
     the adds and removals be carried out."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}
   tags: Documents,Folders, Folder
@@ -284,7 +281,7 @@ apis:
     order to delete folders that have items inside of them. An optional If-Match header
     can be included to ensure that client only deletes the folder if it knows about
     the latest version.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}
   tags: Documents,Folders, Folder
@@ -300,7 +297,7 @@ apis:
     If that parent folder no longer exists or if there is now an item with the same
     name in that parent folder, the new parent folder and/or new name will need to
     be included in the request.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}
   tags: Documents,Folders, Folder
@@ -316,7 +313,7 @@ apis:
     for each item by default. Multiple attributes can be passed in separated by commas
     e.g. fields=name,created_at. Paginated results can be retrieved using the limit
     and offset parameters.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/items
   tags: Documents,Folders, Folder, , Items
@@ -329,7 +326,7 @@ apis:
   x-api-slug: box
   description: Used to create a copy of a folder in another folder. The original version
     of the folder will not be altered.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/copy
   tags: Documents,Folders, Folder, , Copy
@@ -340,7 +337,7 @@ apis:
   x-api-slug: box
   description: Use this to get a list of all the collaborations on a folder i.e. all
     of the users that have access to that folder.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/collaborations
   tags: Documents,Folders, Folder, , Collaborations
@@ -352,7 +349,7 @@ apis:
 - name: Box Get Trashed Folder
   x-api-slug: box
   description: Retrieves an folder that has been moved to the trash.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/trash
   tags: Documents,Folders, Folder, , Trash
@@ -365,7 +362,7 @@ apis:
   x-api-slug: box
   description: Permanently deletes an folder that is in the trash. The item will no
     longer exist in Box. This action cannot be undone.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/trash
   tags: Documents,Folders, Folder, , Trash
@@ -382,7 +379,7 @@ apis:
     otherwise, the mini format is returned for each item by default. Multiple attributes
     can be passed in separated by commas e.g. fields=name,created_at. Paginated results
     can be retrieved using the limit and offset parameters.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/trash/items
   tags: Documents,Folders, Trash, Items
@@ -394,7 +391,7 @@ apis:
 - name: Box Get Watermark on File
   x-api-slug: box
   description: Used to retrieve the watermark for a corresponding Box file.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/watermark
   tags: Documents,Files, File, , Watermark
@@ -407,7 +404,7 @@ apis:
   x-api-slug: box
   description: Used to apply or update the watermark for a corresponding Box file.
     The endpoint accepts a JSON body describing the watermark to apply.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/watermark
   tags: Documents,Files, File, , Watermark
@@ -417,7 +414,7 @@ apis:
 - name: Box Remove Watermark on File
   x-api-slug: box
   description: Used to remove the watermark for a corresponding Box file.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/watermark
   tags: Documents,Files, File, , Watermark
@@ -429,7 +426,7 @@ apis:
 - name: Box Get Watermark on Folder
   x-api-slug: box
   description: Used to retrieve the watermark for a corresponding Box folder.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/watermark
   tags: Documents,Folders, Folder, , Watermark
@@ -442,7 +439,7 @@ apis:
   x-api-slug: box
   description: Used to apply or update the watermark for a corresponding Box folder.
     The endpoints accepts a JSON body describing the watermark to apply.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/watermark
   tags: Documents,Folders, Folder, , Watermark
@@ -452,7 +449,7 @@ apis:
 - name: Box Remove Watermark on Folder
   x-api-slug: box
   description: Used to remove the watermark for a corresponding Box Folder.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/watermark
   tags: Documents,Folders, Folder, , Watermark
@@ -464,7 +461,7 @@ apis:
 - name: Box Create Web Link
   x-api-slug: box
   description: Creates a web link object within a given folder.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//web_links
   tags: Documents,Web, Links
@@ -474,7 +471,7 @@ apis:
 - name: Box Get Web Link
   x-api-slug: box
   description: Use to get information about the web link.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//web_links/{WEB_LINK_ID}
   tags: Documents,Web, Links, Web, Link
@@ -486,7 +483,7 @@ apis:
 - name: Box Update Web Link
   x-api-slug: box
   description: Updates information for a web link.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//web_links/{WEB_LINK_ID}
   tags: Documents,Web, Links, Web, Link
@@ -496,7 +493,7 @@ apis:
 - name: Box Delete Web Link
   x-api-slug: box
   description: Deletes a web link and moves it to the trash
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//web_links/{WEB_LINK_ID}
   tags: Documents,Web, Links, Web, Link
@@ -508,7 +505,7 @@ apis:
 - name: Box Create Metadata Template
   x-api-slug: box
   description: Used to create a new metadata template with the specified schema.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//metadata_templates/schema
   tags: Documents,Metadata, Templates, Schema
@@ -519,7 +516,7 @@ apis:
   x-api-slug: box
   description: Used to retrieve all metadata templates within a user's enterprise.
     Currently only the enterprise scope is supported.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//metadata_templates/{SCOPE}
   tags: Documents,Metadata, Templates, Scope
@@ -531,7 +528,7 @@ apis:
 - name: Box Get Metadata Template
   x-api-slug: box
   description: Used to retrieve the schema for a given metadata template.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//metadata_templates/{SCOPE}/{TEMPLATE}/schema
   tags: Documents,Metadata, Templates, Scope, Template, Schema
@@ -543,7 +540,7 @@ apis:
 - name: Box Update Metadata Template
   x-api-slug: box
   description: Used to update the schema of an existing template.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//metadata_templates/{SCOPE}/{TEMPLATE}/schema
   tags: Documents,Metadata, Templates, Scope, Template, Schema
@@ -553,7 +550,7 @@ apis:
 - name: Box Get all Metadata on File
   x-api-slug: box
   description: Used to retrieve all metadata associated with a given file
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/metadata
   tags: Documents,Files, File, , Metadata
@@ -567,7 +564,7 @@ apis:
   description: Used to create the metadata template instance for a corresponding Box
     file. When creating metadata, only values that adhere to the metadata template
     schema will be accepted.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Files, File, , Metadata, Scope, Template
@@ -578,7 +575,7 @@ apis:
   x-api-slug: box
   description: Used to retrieve the metadata template instance for a corresponding
     Box file.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Files, File, , Metadata, Scope, Template
@@ -592,7 +589,7 @@ apis:
   description: |-
     Used to update the template instance. The request body must follow the JSON-Patch specification, which is represented as a JSON array of operation objects (see examples for more details). Updates can be either add, replace, remove , test, move, or copy. The template instance can only be updated if the template instance already exists. When editing metadata, only values that adhere to the metadata template schema will be accepted.
     The update is applied atomically. If any errors occur during the application of the update operations, the metadata instance remains unchanged.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Files, File, , Metadata, Scope, Template
@@ -603,7 +600,7 @@ apis:
   x-api-slug: box
   description: Used to delete the template instance. To delete custom key:value pairs
     within a template instance, you should refer to the updating metadata section.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//files/{FILE_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Files, File, , Metadata, Scope, Template
@@ -615,7 +612,7 @@ apis:
 - name: Box Get All Metadata on Folder
   x-api-slug: box
   description: Used to retrieve all metadata associated with a given folder
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/metadata
   tags: Documents,Folders, Folder, , Metadata
@@ -629,7 +626,7 @@ apis:
   description: Used to create the metadata template instance for a corresponding Box
     folder. When creating metadata, only values that adhere to the metadata template
     schema will be accepted.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Folders, Folder, , Metadata, Scope, Template
@@ -640,7 +637,7 @@ apis:
   x-api-slug: box
   description: Used to retrieve the metadata template instance for a corresponding
     Box folder.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Folders, Folder, , Metadata, Scope, Template
@@ -655,7 +652,7 @@ apis:
     remove , or test. The template instance can only be updated if the template instance
     already exists. When editing metadata, only values that adhere to the metadata
     template schema will be accepted.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Folders, Folder, , Metadata, Scope, Template
@@ -666,7 +663,7 @@ apis:
   x-api-slug: box
   description: Used to delete the template instance. To delete custom key:value pairs
     within a template instance, you should refer to the updating metadata section.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//folders/{FOLDER_ID}/metadata/{SCOPE}/{TEMPLATE}
   tags: Documents,Folders, Folder, , Metadata, Scope, Template
@@ -678,7 +675,7 @@ apis:
 - name: Box Pending Collaborations
   x-api-slug: box
   description: Used to retrieve all pending collaboration invites for this user.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//collaborations
   tags: Documents,Collaborations
@@ -693,7 +690,7 @@ apis:
     a folder. Either an email address, a user ID, or a group id can be used to create
     the collaboration. If the collaboration is being created with a group, access
     to this endpoint is granted based on the group's invitability_level.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//collaborations
   tags: Documents,Collaborations
@@ -705,7 +702,7 @@ apis:
   description: "Used to get information about a single collaboration. All collaborations
     for a single folder can be retrieved through GET /folders/{id}/collaborations.
     A complete list of the user\u2019s pending collaborations can also be retrieved."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//collaborations/{COLLAB_ID}
   tags: Documents,Collaborations, Collab
@@ -718,7 +715,7 @@ apis:
   x-api-slug: box
   description: Used to edit an existing collaboration. Descriptions of the various
     roles can be found here.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//collaborations/{COLLAB_ID}
   tags: Documents,Collaborations, Collab
@@ -728,7 +725,7 @@ apis:
 - name: Box Delete Collaboration
   x-api-slug: box
   description: Used to delete a single collaboration.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//collaborations/{COLLAB_ID}
   tags: Documents,Collaborations, Collab
@@ -742,7 +739,7 @@ apis:
   description: The search endpoint provides a powerful way of finding items that are
     accessible by a single user or an entire enterprise. Leverage the parameters listed
     below to generate targeted advanced searches.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//search
   tags: Documents,Search
@@ -762,7 +759,7 @@ apis:
     item. Once the item has been retrieved, you can make API requests against the
     actual resource /files/{id} or /folders/{id} as long as the shared link and optional
     password are in the header."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//shared_items
   tags: Documents,Shared, Items
@@ -775,7 +772,7 @@ apis:
   x-api-slug: box
   description: Retrieves the collections for the given user. Currently, only the favorites
     collection is supported.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//collections
   tags: Documents,Collections
@@ -790,7 +787,7 @@ apis:
     Collection item lists behave a lot like getting a folder\u2019s items.\nPaginated
     results can be retrieved using the limit and offset parameters.\nSub-object fields
     can be requested via the ?fields parameter"
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//collections/{COLLECTION_ID}/items
   tags: Documents,Collections, Collection, , Items
@@ -803,7 +800,7 @@ apis:
   x-api-slug: box
   description: Used to add a comment by the user to a specific file or comment (i.e.
     as a reply comment).
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//comments
   tags: Documents,Comments
@@ -814,7 +811,7 @@ apis:
   x-api-slug: box
   description: Used to retrieve the message and metadata about a specific comment.
     Information about the user who created the comment is also included.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//comments/{COMMENT_ID}
   tags: Documents,Comments, Comment
@@ -826,7 +823,7 @@ apis:
 - name: Box Update Comment
   x-api-slug: box
   description: Used to update the message of the comment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//comments/{COMMENT_ID}
   tags: Documents,Comments, Comment
@@ -836,7 +833,7 @@ apis:
 - name: Box Delete Comment
   x-api-slug: box
   description: Permanently deletes a comment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//comments/{COMMENT_ID}
   tags: Documents,Comments, Comment
@@ -848,7 +845,7 @@ apis:
 - name: Box Create Task
   x-api-slug: box
   description: Used to create a single task for single user on a single file.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//tasks
   tags: Documents,Tasks
@@ -858,7 +855,7 @@ apis:
 - name: Box Get Task
   x-api-slug: box
   description: Fetches a specific task.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//tasks/{TASK_ID}
   tags: Documents,Tasks, Task
@@ -870,7 +867,7 @@ apis:
 - name: Box Update Task
   x-api-slug: box
   description: Updates a specific task.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//tasks/{TASK_ID}
   tags: Documents,Tasks, Task
@@ -880,7 +877,7 @@ apis:
 - name: Box Delete Task
   x-api-slug: box
   description: Permanently deletes a specific task.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//tasks/{TASK_ID}
   tags: Documents,Tasks, Task
@@ -892,7 +889,7 @@ apis:
 - name: Box Get Assignments
   x-api-slug: box
   description: Retrieves all of the assignments for a given task.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//tasks/{TASK_ID}/assignments
   tags: Documents,Tasks, Task, , Assignments
@@ -905,7 +902,7 @@ apis:
   x-api-slug: box
   description: Used to assign a task to a single user. There can be multiple assignments
     on a given task.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//task_assignments
   tags: Documents,Task, Assignments
@@ -915,7 +912,7 @@ apis:
 - name: Box Get Task Assignment
   x-api-slug: box
   description: Fetches a specific task assignment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//task_assignments/{TASK_ASSIGNMENT_ID}
   tags: Documents,Task, Assignments, Task, Assignment
@@ -927,7 +924,7 @@ apis:
 - name: Box Update Task Assignment
   x-api-slug: box
   description: Used to update a task assignment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//task_assignments/{TASK_ASSIGNMENT_ID}
   tags: Documents,Task, Assignments, Task, Assignment
@@ -937,7 +934,7 @@ apis:
 - name: Box Delete Task Assignment
   x-api-slug: box
   description: Deletes a specific task assignment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//task_assignments/{TASK_ASSIGNMENT_ID}
   tags: Documents,Task, Assignments, Task, Assignment
@@ -952,7 +949,7 @@ apis:
     Use this to get events for a given user. A chunk of event objects is returned for the user based on the parameters passed in. Parameters indicating how many chunks are left as well as the next stream_position are also returned.
 
     To retrieve Enterprise Events specify 'stream_type=admin_logs'. Retrieves up to a year' events for all users in an enterprise. Upper and lower bounds as well as filters can be applied to the results.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//events
   tags: Documents,Events
@@ -981,7 +978,7 @@ apis:
     case you do not receive the reconnect message in the face of network errors.\nIf
     you receive max_retries error when making GET requests to the real time server,
     you should make another OPTIONS request."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//events
   tags: Documents,Events
@@ -994,7 +991,7 @@ apis:
   x-api-slug: box
   description: Used to provision a new user in an enterprise. This method only works
     for enterprise admins.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users
   tags: Documents,Users
@@ -1005,7 +1002,7 @@ apis:
   x-api-slug: box
   description: Returns a list of all users for the Enterprise along with their user_id,
     public_name, and login.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users
   tags: Documents,Users
@@ -1018,7 +1015,7 @@ apis:
   x-api-slug: box
   description: Retrieves information about the user who is currently logged in i.e.
     the user for whom this auth token was generated.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/me
   tags: Documents,Users, Me
@@ -1031,7 +1028,7 @@ apis:
   x-api-slug: box
   description: Retrieves information about a user in the enterprise. Requires enterprise
     administration authorization.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}
   tags: Documents,Users, User
@@ -1047,7 +1044,7 @@ apis:
     them to a standalone free user), update the special enterprise attribute to be
     null.\n\nUsed to convert one of the user\u2019s confirmed email aliases into the
     user\u2019s primary login."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}
   tags: Documents,Users, User
@@ -1057,7 +1054,7 @@ apis:
 - name: Box Delete User
   x-api-slug: box
   description: Deletes a user in an enterprise account.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}
   tags: Documents,Users, User
@@ -1073,7 +1070,7 @@ apis:
     users as long as the you have administrative permissions and the \u2018source\u2019
     user owns the folders. To move everything from the root folder, use \u201C0\u201D
     which always represents the root folder of a Box account."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}/folders/{FOLDER_ID}
   tags: Documents,Users, User, , Folders, Folder
@@ -1085,7 +1082,7 @@ apis:
   description: Retrieves all email aliases for this user. The collection of email
     aliases does not include the primary login for the user; use GET /users/USER_ID
     to retrieve the login email address.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}/email_aliases
   tags: Documents,Users, User, , Email, Aliases
@@ -1097,7 +1094,7 @@ apis:
 - name: Box Add Email Alias
   x-api-slug: box
   description: "Adds a new email alias to the given user\u2019s account."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}/email_aliases
   tags: Documents,Users, User, , Email, Aliases
@@ -1107,7 +1104,7 @@ apis:
 - name: Box Delete Email Alias
   x-api-slug: box
   description: Removes an email alias from a user.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}/email_aliases/{EMAIL_ALIAS_ID}
   tags: Documents,Users, User, , Email, Aliases, Email, Alias
@@ -1123,7 +1120,7 @@ apis:
     the user will receive an email and prompt to accept the invitation within the
     Box web application. This method requires the "Manage An Enterprise" scope for
     the enterprise, which can be enabled within your developer console.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//invites
   tags: Documents,Invites
@@ -1133,7 +1130,7 @@ apis:
 - name: Box Get status of the invite
   x-api-slug: box
   description: ""
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//invites/{INVITE_ID}
   tags: Documents,Invites, Invite
@@ -1145,7 +1142,7 @@ apis:
 - name: Box Create Group
   x-api-slug: box
   description: Used to create a group.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//groups
   tags: Documents,Groups
@@ -1156,7 +1153,7 @@ apis:
   x-api-slug: box
   description: Retrieves all of the groups for given enterprise. Must have permissions
     to see an enterprise's groups.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//groups
   tags: Documents,Groups
@@ -1168,7 +1165,7 @@ apis:
 - name: Box Get Group
   x-api-slug: box
   description: Used to get information about a group.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//groups/{GROUP_ID}
   tags: Documents,Groups, Group
@@ -1180,7 +1177,7 @@ apis:
 - name: Box Update Group
   x-api-slug: box
   description: Updates a specific group.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//groups/{GROUP_ID}
   tags: Documents,Groups, Group
@@ -1190,7 +1187,7 @@ apis:
 - name: Box Delete Group
   x-api-slug: box
   description: Permanently deletes a specific group.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//groups/{GROUP_ID}
   tags: Documents,Groups, Group
@@ -1202,7 +1199,7 @@ apis:
 - name: Box Create Membership
   x-api-slug: box
   description: Used to add a member to a Group.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//group_memberships
   tags: Documents,Group, Memberships
@@ -1212,7 +1209,7 @@ apis:
 - name: Box Get Membership
   x-api-slug: box
   description: Fetches a specific group membership entry.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//group_memberships/{GROUP_MEMBERSHIP_ID}
   tags: Documents,Group, Memberships, Group, Membership
@@ -1224,7 +1221,7 @@ apis:
 - name: Box Update Membership
   x-api-slug: box
   description: Used to update a group membership.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//group_memberships/{GROUP_MEMBERSHIP_ID}
   tags: Documents,Group, Memberships, Group, Membership
@@ -1234,7 +1231,7 @@ apis:
 - name: Box Delete Membership
   x-api-slug: box
   description: Deletes a specific group membership.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//group_memberships/{GROUP_MEMBERSHIP_ID}
   tags: Documents,Group, Memberships, Group, Membership
@@ -1247,7 +1244,7 @@ apis:
   x-api-slug: box
   description: Retrieves all of the members for a given group if the requesting user
     has access (see Group Object member_viewability_level).
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//groups/{GROUP_ID}/memberships
   tags: Documents,Groups, Group, , Memberships
@@ -1261,7 +1258,7 @@ apis:
   description: Retrieves all of the group memberships for a given user. Note this
     is only available to group admins. To retrieve group memberships for the user
     making the API request, use the users/me/memberships endpoint.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//users/{USER_ID}/memberships
   tags: Documents,Users, User, , Memberships
@@ -1274,7 +1271,7 @@ apis:
   x-api-slug: box
   description: Retrieves all of the group collaborations for a given group. Note this
     is only available to group admins.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//groups/{GROUP_ID}/collaborations
   tags: Documents,Groups, Group, , Collaborations
@@ -1287,7 +1284,7 @@ apis:
   x-api-slug: box
   description: Gets all the device pins within a given enterprise. Must be an enterprise
     admin with the manage enterprise scope to make this call.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//enterprises/{ENTERPRISE_ID}/device_pinners
   tags: Documents,Enterprises, Enterprise, , Device, Pinners
@@ -1299,7 +1296,7 @@ apis:
 - name: Box Get Device Pin
   x-api-slug: box
   description: Gets information about an individual device pin.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//device_pinners/{ID}
   tags: Documents,Device, Pinners
@@ -1311,7 +1308,7 @@ apis:
 - name: Box Delete Device Pin
   x-api-slug: box
   description: Delete individual device pin.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//device_pinners/{ID}
   tags: Documents,Device, Pinners
@@ -1323,7 +1320,7 @@ apis:
 - name: Box Create Retention Policy
   x-api-slug: box
   description: Used to create a new retention policy.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//retention_policies
   tags: Documents,Retention, Policies
@@ -1333,7 +1330,7 @@ apis:
 - name: Box Get Retention Policies
   x-api-slug: box
   description: Retrieves all of the retention policies for the given enterprise.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//retention_policies
   tags: Documents,Retention, Policies
@@ -1345,7 +1342,7 @@ apis:
 - name: Box Get Retention Policy
   x-api-slug: box
   description: Used to retrieve information about a retention policy
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//retention_policies/{POLICY_ID}
   tags: Documents,Retention, Policies, Policy
@@ -1357,7 +1354,7 @@ apis:
 - name: Box Update Retention Policy
   x-api-slug: box
   description: Used to update a retention policy.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//retention_policies/{POLICY_ID}
   tags: Documents,Retention, Policies, Policy
@@ -1368,7 +1365,7 @@ apis:
   x-api-slug: box
   description: Returns a list of all retention policy assignments associated with
     a specified retention policy.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//retention_policies/{POLICY_ID}/assignments
   tags: Documents,Retention, Policies, Policy, , Assignments
@@ -1381,7 +1378,7 @@ apis:
   x-api-slug: box
   description: Returns a list of all retention policy assignments associated with
     a specified retention policy.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//retention_policy_assignments
   tags: Documents,Retention, Policy, Assignments
@@ -1391,7 +1388,7 @@ apis:
 - name: Box Get Retention Policy Assignment
   x-api-slug: box
   description: Used to retrieve information about a retention policy assignment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//retention_policy_assignments/{RETENTION_POLICY_ASSIGNMENT_ID}
   tags: Documents,Retention, Policy, Assignments, Retention, Policy, Assignment
@@ -1403,7 +1400,7 @@ apis:
 - name: Box Get File Version Retentions
   x-api-slug: box
   description: Retrieves all file version retentions for the given enterprise.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//file_version_retentions
   tags: Documents,File, Version, Retentions
@@ -1415,7 +1412,7 @@ apis:
 - name: Box Get File Version Retention
   x-api-slug: box
   description: Used to retrieve information about a file version retention
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//file_version_retentions/{FILE_VERSION_RETENTION_ID}
   tags: Documents,File, Version, Retentions, File, Version, Retention
@@ -1429,7 +1426,7 @@ apis:
   description: Create a new Legal Hold Policy. Optional date filter may be passed.
     If Policy has a date filter, any Custodian assignments will apply only to file
     versions created or uploaded inside of the date range.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policies
   tags: Documents,Legal, Hold, Policies
@@ -1439,7 +1436,7 @@ apis:
 - name: Box Get Legal Hold Policies
   x-api-slug: box
   description: Get a list of Legal Hold Policies that belong to your Enterprise.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policies
   tags: Documents,Legal, Hold, Policies
@@ -1452,7 +1449,7 @@ apis:
   x-api-slug: box
   description: Update existing Legal Hold Policy. Only name and description can be
     modified.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policies/{ID}
   tags: Documents,Legal, Hold, Policies
@@ -1462,7 +1459,7 @@ apis:
 - name: Box Get Legal Hold Policy
   x-api-slug: box
   description: Get details of a single Legal Hold Policy
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policies/{ID}
   tags: Documents,Legal, Hold, Policies
@@ -1476,7 +1473,7 @@ apis:
   description: Sends request to delete an existing Legal Hold Policy. Note that this
     is an asynchronous process - the Policy will not be fully deleted yet when the
     response comes back.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policies/{ID}
   tags: Documents,Legal, Hold, Policies
@@ -1488,7 +1485,7 @@ apis:
 - name: Box Get Legal hold policy assignments
   x-api-slug: box
   description: Get list of assignments for a single Policy.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policies/{ID}/assignments
   tags: Documents,Legal, Hold, Policies, , Assignments
@@ -1501,7 +1498,7 @@ apis:
   x-api-slug: box
   description: Create a new Assignment, which will apply the Legal Hold Policy to
     the target of the Assignment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policy_assignments
   tags: Documents,Legal, Hold, Policy, Assignments
@@ -1511,7 +1508,7 @@ apis:
 - name: Box Get Legal Hold Policy Assignment
   x-api-slug: box
   description: Get details of a single assignment.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policy_assignments/{ASSIGNMENT_ID}
   tags: Documents,Legal, Hold, Policy, Assignments, Assignment
@@ -1525,7 +1522,7 @@ apis:
   description: Sends request to delete an existing Assignment. Note that this is an
     asynchronous process - the Assignment will not be fully deleted yet when the response
     comes back.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//legal_hold_policy_assignments/{ASSIGNMENT_ID}
   tags: Documents,Legal, Hold, Policy, Assignments, Assignment
@@ -1537,7 +1534,7 @@ apis:
 - name: Box Get List of File Version Legal Holds
   x-api-slug: box
   description: Get list of non-deleted Holds for a single Policy.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//file_version_legal_holds
   tags: Documents,File, Version, Legal, Holds
@@ -1549,7 +1546,7 @@ apis:
 - name: Box Get File Version Legal Hold
   x-api-slug: box
   description: Get details of a single File Version Legal Hold.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//file_version_legal_holds/{ID}
   tags: Documents,File, Version, Legal, Holds
@@ -1561,7 +1558,7 @@ apis:
 - name: Box Create Webhook
   x-api-slug: box
   description: Create Webhook
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//webhooks
   tags: Documents,Webhooks
@@ -1575,7 +1572,7 @@ apis:
     If more than limit webhooks are defined then Box returns the webhooks in batches. When the results are batched, Box sends limit webhooks along with a next_marker field in the response object. The value of the next_marker field is a marker string that you can use in later requests to tell Box which batch to send next.
     When you send a request that includes a marker string, Box sends the next batch of webhooks, beginning after the last webhook of the previous batch. When the response contains the last of the defined webhooks, Box omits the next_marker field from its response.
     You can use limit and marker together with the marker string returned in the next_marker field to paginate lists of webhooks.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//webhooks
   tags: Documents,Webhooks
@@ -1587,7 +1584,7 @@ apis:
 - name: Box Get Webhook
   x-api-slug: box
   description: Get a Webhook
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//webhooks/{WEBHOOK_ID}
   tags: Documents,Webhooks, Webhook
@@ -1599,7 +1596,7 @@ apis:
 - name: Box Update Webhook
   x-api-slug: box
   description: Update a Webhook
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//webhooks/{WEBHOOK_ID}
   tags: Documents,Webhooks, Webhook
@@ -1609,7 +1606,7 @@ apis:
 - name: Box Delete Webhook
   x-api-slug: box
   description: Permanently deletes a webhook
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0//webhooks/{WEBHOOK_ID}
   tags: Documents,Webhooks, Webhook
@@ -1622,7 +1619,7 @@ apis:
   x-api-slug: box
   description: Box.net provides a sophisticated API for their online document sharing
     and collaboration web application.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/box1200x630.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
   humanURL: http://box.com
   baseURL: https://api.box.com//2.0
   tags: Box
@@ -1638,6 +1635,8 @@ x-common:
   url: http://blog.box.com/feed/
 - type: x-crunchbase
   url: http://www.crunchbase.com/company/box
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/box
 - type: x-developer
   url: http://developers.box.com
 - type: x-github
@@ -1648,6 +1647,8 @@ x-common:
   url: https://developers.box.com/roadmap/
 - type: x-twitter
   url: https://twitter.com/BoxPlatform
+- type: x-twitter
+  url: https://twitter.com/BoxHQ
 - type: x-website
   url: http://box.com
 include: []

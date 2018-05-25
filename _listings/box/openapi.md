@@ -4,7 +4,7 @@ x-collection-name: Box
 x-complete: 1
 info:
   title: Box
-  description: the-box-content-api-gives-you-access-to-secure-content-management-and-content-experience-features-for-use-in-your-own-app-it-strives-to-be-restful-and-is-organized-around-the-main-resources-youre-familiar-with-from-the-box-web-interface
+  description: the-box-content-api-gives-you-access-to-secure-content-management-and-content-experience-features-for-use-in-your-own-app--it-strives-to-be-restful-and-is-organized-around-the-main-resources-youre-familiar-with-from-the-box-web-interface-
   version: 1.0.0
 host: api.box.com
 basePath: /2.0
@@ -72,8 +72,8 @@ paths:
         name: FILE_ID
       - in: header
         name: If-Match
-        description: "The etag of the file can be included as an \u2018If-Match\u2019
-          header to prevent race conditions"
+        description: The etag of the file can be included as an If-Match header to
+          prevent race conditions
       responses:
         200:
           description: OK
@@ -260,7 +260,7 @@ paths:
         the .jpg format. Thumbnails can be generated for the image and video file
         formats listed here.
       operationId: getFileThumbnail
-      x-api-path-slug: filesfile-idthumbnailextension-get
+      x-api-path-slug: filesfile-idthumbnail-extension-get
       parameters:
       - in: path
         name: EXTENSION
@@ -474,7 +474,7 @@ paths:
         name: FOLDER_ID
       - in: header
         name: If-Match
-        description: "This is in the \u2018etag\u2019 field of the folder object"
+        description: This is in the etag field of the folder object
       responses:
         200:
           description: OK
@@ -495,7 +495,7 @@ paths:
         name: FOLDER_ID
       - in: header
         name: If-Match
-        description: "This is in the \u2018etag\u2019 field of the folder object"
+        description: This is in the etag field of the folder object
       - in: query
         name: recursive
       responses:
