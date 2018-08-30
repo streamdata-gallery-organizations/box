@@ -2,7 +2,7 @@
   "info": {
     "name": "Box Get Collection Items",
     "_postman_id": "bb6bfa8e-8c4c-4b8a-9e9f-0b5ce0ec6008",
-    "description": "Retrieves the files and/or folders contained within this collection. Collection item lists behave a lot like getting a folder’s items.\nPaginated results can be retrieved using the limit and offset parameters.\nSub-object fields can be requested via the ?fields parameter",
+    "description": "Retrieves the files and/or folders contained within this collection. Collection item lists behave a lot like getting a folder???s items.\nPaginated results can be retrieved using the limit and offset parameters.\nSub-object fields can be requested via the ?fields parameter",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
   },
   "item": [

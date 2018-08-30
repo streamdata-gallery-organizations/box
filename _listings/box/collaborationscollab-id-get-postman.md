@@ -2,7 +2,7 @@
   "info": {
     "name": "Box Get Collaboration",
     "_postman_id": "2ecdddc1-c5b7-4e80-b011-2983e518f8d0",
-    "description": "Used to get information about a single collaboration. All collaborations for a single folder can be retrieved through GET /folders/{id}/collaborations. A complete list of the user’s pending collaborations can also be retrieved.",
+    "description": "Used to get information about a single collaboration. All collaborations for a single folder can be retrieved through GET /folders/{id}/collaborations. A complete list of the user???s pending collaborations can also be retrieved.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
   },
   "item": [

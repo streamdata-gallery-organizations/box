@@ -72,8 +72,8 @@ paths:
         name: FILE_ID
       - in: header
         name: If-Match
-        description: The etag of the file can be included as an If-Match header to
-          prevent race conditions
+        description: The etag of the file can be included as an ???If-Match??? header
+          to prevent race conditions
       responses:
         200:
           description: OK
@@ -83,8 +83,8 @@ paths:
       - File
     delete:
       summary: Delete File
-      description: "Discards a file to the trash. The etag of the file can be included
-        as an \u2018If-Match\u2019 header to prevent race conditions."
+      description: Discards a file to the trash. The etag of the file can be included
+        as an ???If-Match??? header to prevent race conditions.
       operationId: deleteFile
       x-api-path-slug: filesfile-id-delete
       parameters:
@@ -418,9 +418,9 @@ paths:
   /folders/{FOLDER_ID}:
     get:
       summary: Get Folder's Info
-      description: "Retrieves the full metadata about a folder, including information
+      description: Retrieves the full metadata about a folder, including information
         about when it was last updated as well as the files and folders contained
-        in it. The root folder of a Box account is always represented by the id \u201C0\u201D."
+        in it. The root folder of a Box account is always represented by the id ???0???.
       operationId: getFolder
       x-api-path-slug: foldersfolder-id-get
       parameters:
@@ -438,28 +438,13 @@ paths:
       - Folder
     put:
       summary: Update Folder, Create Shared Link, Create or Delete
-      description: "Used to update information about the folder. To move a folder,
-        update the ID of its parent. To enable an email address that can be used to
-        upload files to this folder, update the folder_upload_email attribute. An
-        optional If-Match header can be included to ensure that client only updates
-        the folder if it knows about the latest version.\n\nUsed to create a shared
-        link for this particular folder. Please see here for more information on the
-        permissions available for shared links. In order to get default shared link
-        status, set it to an empty access level, i.e. {\"shared_link\": {}}. In order
-        to disable a shared link, send this same type of PUT request with the value
-        of shared_link set to null, i.e. {\"shared_link\": null}\n\nTo add or remove
-        an item from a collection, you do a PUT on that item and change the list of
-        collections it belongs to. Philosophically, this is similar to the way \u201Cmove\u201D
-        operations work on files and folders: you do a PUT on the item and change
-        its parent. It\u2019s the same idea with collections, except you\u2019re changing
-        which collection(s) the item belongs to instead of the folder it belongs to.
-        Currently the only collection available is the favorites collection, and you\u2019ll
-        need to know it\u2019s ID for the user that is making the API call, since
-        every user has a different favorites collection_id.\nThe Add/Remove API handling
-        will check all ids passed in before performing any add/removal operations.
-        If any collection ids are malformed or do not exist in the user\u2019s account,
-        the API call will throw a 400. Only if all of the collection ids are valid
-        will the adds and removals be carried out."
+      description: |-
+        Used to update information about the folder. To move a folder, update the ID of its parent. To enable an email address that can be used to upload files to this folder, update the folder_upload_email attribute. An optional If-Match header can be included to ensure that client only updates the folder if it knows about the latest version.
+
+        Used to create a shared link for this particular folder. Please see here for more information on the permissions available for shared links. In order to get default shared link status, set it to an empty access level, i.e. {"shared_link": {}}. In order to disable a shared link, send this same type of PUT request with the value of shared_link set to null, i.e. {"shared_link": null}
+
+        To add or remove an item from a collection, you do a PUT on that item and change the list of collections it belongs to. Philosophically, this is similar to the way ???move??? operations work on files and folders: you do a PUT on the item and change its parent. It???s the same idea with collections, except you???re changing which collection(s) the item belongs to instead of the folder it belongs to. Currently the only collection available is the favorites collection, and you???ll need to know it???s ID for the user that is making the API call, since every user has a different favorites collection_id.
+        The Add/Remove API handling will check all ids passed in before performing any add/removal operations. If any collection ids are malformed or do not exist in the user???s account, the API call will throw a 400. Only if all of the collection ids are valid will the adds and removals be carried out.
       operationId: updateFolder
       x-api-path-slug: foldersfolder-id-put
       parameters:
@@ -474,7 +459,7 @@ paths:
         name: FOLDER_ID
       - in: header
         name: If-Match
-        description: This is in the etag field of the folder object
+        description: This is in the ???etag??? field of the folder object
       responses:
         200:
           description: OK
@@ -495,7 +480,7 @@ paths:
         name: FOLDER_ID
       - in: header
         name: If-Match
-        description: This is in the etag field of the folder object
+        description: This is in the ???etag??? field of the folder object
       - in: query
         name: recursive
       responses:
@@ -533,7 +518,7 @@ paths:
       - Folder
   /folders/{FOLDER_ID}/items:
     get:
-      summary: "Get Folder\u2019s Items"
+      summary: Get Folder???s Items
       description: Retrieves the files and/or folders contained within this folder
         without any other metadata about the folder. Any attribute in the full files
         or folders objects can be passed in with the fields parameter to get specific

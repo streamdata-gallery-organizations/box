@@ -40,7 +40,7 @@
               {
                 "key": "If-Match",
                 "value": "{}",
-                "description": "This is in the ‘etag’ field of the folder object",
+                "description": "This is in the ???etag??? field of the folder object",
                 "disabled": false
               }
             ],

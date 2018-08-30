@@ -76,8 +76,8 @@ paths:
         name: FILE_ID
       - in: header
         name: If-Match
-        description: The etag of the file can be included as an If-Match header to
-          prevent race conditions
+        description: The etag of the file can be included as an ???If-Match??? header
+          to prevent race conditions
       responses:
         200:
           description: OK
@@ -87,8 +87,8 @@ paths:
       - File
     delete:
       summary: Delete File
-      description: "Discards a file to the trash. The etag of the file can be included
-        as an \u2018If-Match\u2019 header to prevent race conditions."
+      description: Discards a file to the trash. The etag of the file can be included
+        as an ???If-Match??? header to prevent race conditions.
       operationId: deleteFile
       x-api-path-slug: filesfile-id-delete
       parameters:

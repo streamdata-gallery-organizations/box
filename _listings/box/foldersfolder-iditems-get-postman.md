@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "Box Get Folder’s Items",
+    "name": "Box Get Folder???s Items",
     "_postman_id": "7aa4ceb9-af32-4b7c-8527-b8a19bda09d4",
     "description": "Retrieves the files and/or folders contained within this folder without any other metadata about the folder. Any attribute in the full files or folders objects can be passed in with the fields parameter to get specific attributes, and only those specific attributes back; otherwise, the mini format is returned for each item by default. Multiple attributes can be passed in separated by commas e.g. fields=name,created_at. Paginated results can be retrieved using the limit and offset parameters.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"

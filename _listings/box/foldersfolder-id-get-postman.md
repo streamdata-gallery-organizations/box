@@ -2,7 +2,7 @@
   "info": {
     "name": "Box Get Folder's Info",
     "_postman_id": "f31d98a4-51f4-4fa4-b0e2-66af7d6b5895",
-    "description": "Retrieves the full metadata about a folder, including information about when it was last updated as well as the files and folders contained in it. The root folder of a Box account is always represented by the id “0”.",
+    "description": "Retrieves the full metadata about a folder, including information about when it was last updated as well as the files and folders contained in it. The root folder of a Box account is always represented by the id ???0???.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
   },
   "item": [

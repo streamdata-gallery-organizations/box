@@ -77,8 +77,8 @@ paths:
         name: FILE_ID
       - in: header
         name: If-Match
-        description: The etag of the file can be included as an If-Match header to
-          prevent race conditions
+        description: The etag of the file can be included as an ???If-Match??? header
+          to prevent race conditions
       responses:
         200:
           description: OK

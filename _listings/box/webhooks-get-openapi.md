@@ -76,8 +76,8 @@ paths:
         name: FILE_ID
       - in: header
         name: If-Match
-        description: The etag of the file can be included as an If-Match header to
-          prevent race conditions
+        description: The etag of the file can be included as an ???If-Match??? header
+          to prevent race conditions
       responses:
         200:
           description: OK
@@ -87,8 +87,8 @@ paths:
       - File
     delete:
       summary: Delete File
-      description: "Discards a file to the trash. The etag of the file can be included
-        as an \u2018If-Match\u2019 header to prevent race conditions."
+      description: Discards a file to the trash. The etag of the file can be included
+        as an ???If-Match??? header to prevent race conditions.
       operationId: deleteFile
       x-api-path-slug: filesfile-id-delete
       parameters:
@@ -422,9 +422,9 @@ paths:
   /folders/{FOLDER_ID}:
     get:
       summary: Get Folder's Info
-      description: "Retrieves the full metadata about a folder, including information
+      description: Retrieves the full metadata about a folder, including information
         about when it was last updated as well as the files and folders contained
-        in it. The root folder of a Box account is always represented by the id \u201C0\u201D."
+        in it. The root folder of a Box account is always represented by the id ???0???.
       operationId: getFolder
       x-api-path-slug: foldersfolder-id-get
       parameters:
@@ -442,28 +442,13 @@ paths:
       - Folder
     put:
       summary: Update Folder, Create Shared Link, Create or Delete
-      description: "Used to update information about the folder. To move a folder,
-        update the ID of its parent. To enable an email address that can be used to
-        upload files to this folder, update the folder_upload_email attribute. An
-        optional If-Match header can be included to ensure that client only updates
-        the folder if it knows about the latest version.\n\nUsed to create a shared
-        link for this particular folder. Please see here for more information on the
-        permissions available for shared links. In order to get default shared link
-        status, set it to an empty access level, i.e. {\"shared_link\": {}}. In order
-        to disable a shared link, send this same type of PUT request with the value
-        of shared_link set to null, i.e. {\"shared_link\": null}\n\nTo add or remove
-        an item from a collection, you do a PUT on that item and change the list of
-        collections it belongs to. Philosophically, this is similar to the way \u201Cmove\u201D
-        operations work on files and folders: you do a PUT on the item and change
-        its parent. It\u2019s the same idea with collections, except you\u2019re changing
-        which collection(s) the item belongs to instead of the folder it belongs to.
-        Currently the only collection available is the favorites collection, and you\u2019ll
-        need to know it\u2019s ID for the user that is making the API call, since
-        every user has a different favorites collection_id.\nThe Add/Remove API handling
-        will check all ids passed in before performing any add/removal operations.
-        If any collection ids are malformed or do not exist in the user\u2019s account,
-        the API call will throw a 400. Only if all of the collection ids are valid
-        will the adds and removals be carried out."
+      description: |-
+        Used to update information about the folder. To move a folder, update the ID of its parent. To enable an email address that can be used to upload files to this folder, update the folder_upload_email attribute. An optional If-Match header can be included to ensure that client only updates the folder if it knows about the latest version.
+
+        Used to create a shared link for this particular folder. Please see here for more information on the permissions available for shared links. In order to get default shared link status, set it to an empty access level, i.e. {"shared_link": {}}. In order to disable a shared link, send this same type of PUT request with the value of shared_link set to null, i.e. {"shared_link": null}
+
+        To add or remove an item from a collection, you do a PUT on that item and change the list of collections it belongs to. Philosophically, this is similar to the way ???move??? operations work on files and folders: you do a PUT on the item and change its parent. It???s the same idea with collections, except you???re changing which collection(s) the item belongs to instead of the folder it belongs to. Currently the only collection available is the favorites collection, and you???ll need to know it???s ID for the user that is making the API call, since every user has a different favorites collection_id.
+        The Add/Remove API handling will check all ids passed in before performing any add/removal operations. If any collection ids are malformed or do not exist in the user???s account, the API call will throw a 400. Only if all of the collection ids are valid will the adds and removals be carried out.
       operationId: updateFolder
       x-api-path-slug: foldersfolder-id-put
       parameters:
@@ -478,7 +463,7 @@ paths:
         name: FOLDER_ID
       - in: header
         name: If-Match
-        description: This is in the etag field of the folder object
+        description: This is in the ???etag??? field of the folder object
       responses:
         200:
           description: OK
@@ -499,7 +484,7 @@ paths:
         name: FOLDER_ID
       - in: header
         name: If-Match
-        description: This is in the etag field of the folder object
+        description: This is in the ???etag??? field of the folder object
       - in: query
         name: recursive
       responses:
@@ -537,7 +522,7 @@ paths:
       - Folder
   /folders/{FOLDER_ID}/items:
     get:
-      summary: "Get Folder\u2019s Items"
+      summary: Get Folder???s Items
       description: Retrieves the files and/or folders contained within this folder
         without any other metadata about the folder. Any attribute in the full files
         or folders objects can be passed in with the fields parameter to get specific
@@ -1260,9 +1245,9 @@ paths:
   /collaborations/{COLLAB_ID}:
     get:
       summary: Get Collaboration
-      description: "Used to get information about a single collaboration. All collaborations
+      description: Used to get information about a single collaboration. All collaborations
         for a single folder can be retrieved through GET /folders/{id}/collaborations.
-        A complete list of the user\u2019s pending collaborations can also be retrieved."
+        A complete list of the user???s pending collaborations can also be retrieved.
       operationId: getCollaboration
       x-api-path-slug: collaborationscollab-id-get
       parameters:
@@ -1379,15 +1364,9 @@ paths:
   /shared_items:
     get:
       summary: Shared Items
-      description: "Shared items are any files or folders that are represented by
-        a shared link. Shared items are different from other API resources in that
-        a shared resource doesn\u2019t necessarily have to be in the account of the
-        user accessing it. The actual shared link itself is used along with a normal
-        access token.\nUsed to retrieve the metadata about a shared item when only
-        given a shared link. Because of varying permission for shared links, a password
-        may be required to retrieve the shared item. Once the item has been retrieved,
-        you can make API requests against the actual resource /files/{id} or /folders/{id}
-        as long as the shared link and optional password are in the header."
+      description: |-
+        Shared items are any files or folders that are represented by a shared link. Shared items are different from other API resources in that a shared resource doesn???t necessarily have to be in the account of the user accessing it. The actual shared link itself is used along with a normal access token.
+        Used to retrieve the metadata about a shared item when only given a shared link. Because of varying permission for shared links, a password may be required to retrieve the shared item. Once the item has been retrieved, you can make API requests against the actual resource /files/{id} or /folders/{id} as long as the shared link and optional password are in the header.
       operationId: getSharedItems
       x-api-path-slug: shared-items-get
       parameters:
@@ -1417,10 +1396,10 @@ paths:
   /collections/{COLLECTION_ID}/items:
     get:
       summary: Get Collection Items
-      description: "Retrieves the files and/or folders contained within this collection.
-        Collection item lists behave a lot like getting a folder\u2019s items.\nPaginated
-        results can be retrieved using the limit and offset parameters.\nSub-object
-        fields can be requested via the ?fields parameter"
+      description: |-
+        Retrieves the files and/or folders contained within this collection. Collection item lists behave a lot like getting a folder???s items.
+        Paginated results can be retrieved using the limit and offset parameters.
+        Sub-object fields can be requested via the ?fields parameter
       operationId: getCollectionItems
       x-api-path-slug: collectionscollection-iditems-get
       parameters:
@@ -1733,25 +1712,11 @@ paths:
       - Events
     options:
       summary: Long polling
-      description: "To get real-time notification of activity in a Box account, use
-        the long poll feature of the /events API. To do so, first call the /events
-        API with an OPTIONS call to retrieve the long poll URL to use. Next, make
-        a GET request to the provided URL to begin listening for events. If an event
-        occurs within an account you are monitoring, you will receive a response with
-        the value new_change. It\u2019s important to note that this response will
-        not come with any other details, but should serve as a prompt to take further
-        action such as calling the /events endpoint with your last known stream_position.
-        After sending this response, the server will close the connection and you
-        will need to repeat the long poll process to begin listening for events again.\nIf
-        no events occur for a period of time after you make the GET request to the
-        long poll URL, you will receive a response with the value reconnect. When
-        you receive this response, you\u2019ll make another OPTIONS call to the /events
-        endpoint and repeat the long poll process.\nIf you receive no events in retry_timeout
-        seconds, you should make another GET request to the real time server (i.e.
-        URL in the response). This might be necessary in case you do not receive the
-        reconnect message in the face of network errors.\nIf you receive max_retries
-        error when making GET requests to the real time server, you should make another
-        OPTIONS request."
+      description: |-
+        To get real-time notification of activity in a Box account, use the long poll feature of the /events API. To do so, first call the /events API with an OPTIONS call to retrieve the long poll URL to use. Next, make a GET request to the provided URL to begin listening for events. If an event occurs within an account you are monitoring, you will receive a response with the value new_change. It???s important to note that this response will not come with any other details, but should serve as a prompt to take further action such as calling the /events endpoint with your last known stream_position. After sending this response, the server will close the connection and you will need to repeat the long poll process to begin listening for events again.
+        If no events occur for a period of time after you make the GET request to the long poll URL, you will receive a response with the value reconnect. When you receive this response, you???ll make another OPTIONS call to the /events endpoint and repeat the long poll process.
+        If you receive no events in retry_timeout seconds, you should make another GET request to the real time server (i.e. URL in the response). This might be necessary in case you do not receive the reconnect message in the face of network errors.
+        If you receive max_retries error when making GET requests to the real time server, you should make another OPTIONS request.
       operationId: eventLongPolling
       x-api-path-slug: events-options
       responses:
@@ -1850,11 +1815,10 @@ paths:
       - User
     put:
       summary: Update User, Change User's Login
-      description: "Used to edit the settings and information about a user. This method
-        only works for enterprise admins. To roll a user out of the enterprise (and
-        convert them to a standalone free user), update the special enterprise attribute
-        to be null.\n\nUsed to convert one of the user\u2019s confirmed email aliases
-        into the user\u2019s primary login."
+      description: |-
+        Used to edit the settings and information about a user. This method only works for enterprise admins. To roll a user out of the enterprise (and convert them to a standalone free user), update the special enterprise attribute to be null.
+
+        Used to convert one of the user???s confirmed email aliases into the user???s primary login.
       operationId: updateUser
       x-api-path-slug: usersuser-id-put
       parameters:
@@ -1896,11 +1860,11 @@ paths:
   /users/{USER_ID}/folders/{FOLDER_ID}:
     put:
       summary: Move User's Folder
-      description: "Moves all of the owned content from within one user\u2019s folder
-        into a new folder in another user\u2019s account. You can move folders across
-        users as long as the you have administrative permissions and the \u2018source\u2019
-        user owns the folders. To move everything from the root folder, use \u201C0\u201D
-        which always represents the root folder of a Box account."
+      description: Moves all of the owned content from within one user???s folder
+        into a new folder in another user???s account. You can move folders across
+        users as long as the you have administrative permissions and the ???source???
+        user owns the folders. To move everything from the root folder, use ???0???
+        which always represents the root folder of a Box account.
       operationId: updateUserFolder
       x-api-path-slug: usersuser-idfoldersfolder-id-put
       parameters:
@@ -1950,7 +1914,7 @@ paths:
       - Aliases
     post:
       summary: Add Email Alias
-      description: "Adds a new email alias to the given user\u2019s account."
+      description: Adds a new email alias to the given user???s account.
       operationId: addEmailAlias
       x-api-path-slug: usersuser-idemail-aliases-post
       parameters:

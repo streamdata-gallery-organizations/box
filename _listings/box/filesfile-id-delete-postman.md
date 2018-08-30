@@ -2,7 +2,7 @@
   "info": {
     "name": "Box Delete File",
     "_postman_id": "fa2cf9be-7e13-4536-bc6c-e6e9505ac5ae",
-    "description": "Discards a file to the trash. The etag of the file can be included as an ‘If-Match’ header to prevent race conditions.",
+    "description": "Discards a file to the trash. The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
   },
   "item": [

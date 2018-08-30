@@ -4,9 +4,9 @@ x-collection-name: Box
 x-complete: 0
 info:
   title: Box Get Folder's Info
-  description: "Retrieves the full metadata about a folder, including information
-    about when it was last updated as well as the files and folders contained in it.
-    The root folder of a Box account is always represented by the id \u201C0\u201D."
+  description: Retrieves the full metadata about a folder, including information about
+    when it was last updated as well as the files and folders contained in it. The
+    root folder of a Box account is always represented by the id ???0???.
   version: 1.0.0
 host: api.box.com
 basePath: /2.0
@@ -74,8 +74,8 @@ paths:
         name: FILE_ID
       - in: header
         name: If-Match
-        description: The etag of the file can be included as an If-Match header to
-          prevent race conditions
+        description: The etag of the file can be included as an ???If-Match??? header
+          to prevent race conditions
       responses:
         200:
           description: OK
@@ -85,8 +85,8 @@ paths:
       - File
     delete:
       summary: Delete File
-      description: "Discards a file to the trash. The etag of the file can be included
-        as an \u2018If-Match\u2019 header to prevent race conditions."
+      description: Discards a file to the trash. The etag of the file can be included
+        as an ???If-Match??? header to prevent race conditions.
       operationId: deleteFile
       x-api-path-slug: filesfile-id-delete
       parameters:
@@ -420,9 +420,9 @@ paths:
   /folders/{FOLDER_ID}:
     get:
       summary: Get Folder's Info
-      description: "Retrieves the full metadata about a folder, including information
+      description: Retrieves the full metadata about a folder, including information
         about when it was last updated as well as the files and folders contained
-        in it. The root folder of a Box account is always represented by the id \u201C0\u201D."
+        in it. The root folder of a Box account is always represented by the id ???0???.
       operationId: getFolder
       x-api-path-slug: foldersfolder-id-get
       parameters:
